@@ -19,4 +19,8 @@ module.exports = async function getAccountsNetwork(deployer) {
     __dirname + "/../../passaportecovid/src/utils/listaCidadaos.json",
     JSON.stringify(listaContas, null, 4)
   );
+  await fs.writeFile(
+    __dirname + "/../../passaportecovid/src/utils/enderecoAdm.json",
+    JSON.stringify({ address: contas[0] }, null, 4)
+  );
 };
